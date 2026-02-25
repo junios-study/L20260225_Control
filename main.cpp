@@ -4,19 +4,29 @@
 
 using namespace std;
 
+//Array[0] -> 000011a3bfc2 + 0
+//   [0][][][][][][][][9]
+
+//2D
+//Array[Y][X] -> 000011a3bfc2 + 0
+//   [0][][][3]
+//   [0][][][3]
+//	 [0][][][3]
+//	 [0][][][3]
+// 
+//   [0][][][3][0][][][3][0][][][3][0][][][3]
+
+
 int main()
 {
-	int First = 0;
-	int Second = 0;
+	int Array[10];
 
-	cin >> First;
-	cin >> Second;
+	for (int i = 0; i < 10; i++)
+	{
+		Array[i] = i + 1;
+	}
 
-	cout << First + Second << endl;
-	cout << First - Second << endl;
-	cout << First * Second << endl;
-	cout << First / Second << endl;
-	cout << First % Second << endl;
 
 	return 0;
 }
+
