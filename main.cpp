@@ -47,7 +47,8 @@ int main()
 		
 		int Temp;
 		Temp = _getch();
-		PlayerX++;
+		PlayerY++;
+		system("cls");
 	}
 
 
