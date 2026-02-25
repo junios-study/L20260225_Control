@@ -1,111 +1,17 @@
 #include <iostream>
-#include <conio.h>
 
 using namespace std;
 
-int Map[10][10] = {
-	{1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-	{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-	{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-	{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-	{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-	{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-	{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-	{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-	{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-	{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
-};
-
-int PlayerX = 1;
-int PlayerY = 1;
-int PlayerInput;
-
-void Input()
-{
-	//Input
-	PlayerInput = _getch(); //'w', 'a', 's', 'd'
-}
-
-void Process()
-{
-	//Process
-	if (PlayerInput == 'w')
-	{
-		PlayerY--;
-	}
-	if (PlayerInput == 's')
-	{
-		PlayerY++;
-	}
-	if (PlayerInput == 'a')
-	{
-		PlayerX--;
-	}
-	if (PlayerInput == 'd')
-	{
-		PlayerX++;
-	}
-
-}
-
-void Render()
-{
-	system("cls");
-
-	//Render
-	for (int Y = 0; Y < 10; ++Y)
-	{
-		for (int X = 0; X < 10; ++X)
-		{
-			if (PlayerX == X)
-			{
-				if (PlayerY == Y)
-				{
-					cout << "%";
-				}
-			}
-			else if (Map[Y][X] == 1)
-			{
-				cout << "#";
-			}
-			else if (Map[Y][X] == 0)
-			{
-				cout << " ";
-			}
-		}
-		cout << endl;
-	}
-
-
-}
-
-
 int main()
 {
+	bool Result1 = true;
+	bool Result2 = false;
+	bool Result3 = false;
 
+	bool Temp = (Result1 || Result2);
+	Temp = Temp && Result3 && (10 > 3);
 
-	//GameLoop
-	//Frame
-	for (;;)
-	{
-		Input();
-
-		Process();
-
-
-
-		Render();
-
-
-
-
-		
-		
-	}
-
-
-
+	cout << Temp << endl;
 
 	return 0;
 }
-
