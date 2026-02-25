@@ -18,10 +18,18 @@ int main()
 		{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
 	};
 
-	for (int X = 0; X < 10; ++X)
+	for (int Z = 0; Z < 10; ++Z)
 	{
-		cout << Map[0][X];
+		for (int Y = 0; Y < 10; ++Y)
+		{
+			for (int X = 0; X < 10; ++X)
+			{
+				cout << Map[Y][X];
+			}
+			cout << endl;
+		}
 	}
+
 
 
 	return 0;
